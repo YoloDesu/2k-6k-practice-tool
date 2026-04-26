@@ -150,8 +150,8 @@ export class AppComponent implements OnDestroy {
       return;
     }
 
-    const normalizedAnswer = this.kanaNormalizer.normalizeRomajiAnswer(this.answerText);
-    this.session = submitPracticeAnswer(this.session, normalizedAnswer);
+    const normalizedAnswers = this.kanaNormalizer.normalizeRomajiAnswerVariants(this.answerText);
+    this.session = submitPracticeAnswer(this.session, normalizedAnswers);
   }
 
   protected nextCard(): void {

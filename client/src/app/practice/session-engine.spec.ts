@@ -47,16 +47,43 @@ describe('practice session engine', () => {
     expect(session.submittedCount).toBe(2);
     expect(session.cards.length).toBe(2);
   });
+
+  it('accepts adjective stems that omit the final hiragana i', () => {
+    let session = createPracticeSession([
+      card(1, 'big', '\u304a\u304a\u304d\u3044', 'Adjective')
+    ]);
+
+    session = submitPracticeAnswer(session, '\u304a\u304a\u304d');
+
+    expect(session.correctCount).toBe(1);
+    expect(session.incorrectCards).toEqual([]);
+  });
+
+  it('does not accept final i omission for non-adjectives', () => {
+    let session = createPracticeSession([
+      card(1, 'hate', '\u304d\u3089\u3044', 'Adjectival Noun')
+    ]);
+
+    session = submitPracticeAnswer(session, '\u304d\u3089');
+
+    expect(session.correctCount).toBe(0);
+    expect(session.incorrectCards.map(missedCard => missedCard.expression)).toEqual(['hate']);
+  });
 });
 
-function card(id: number, expression: string, readingHiragana: string): DeckCard {
+function card(
+  id: number,
+  expression: string,
+  readingHiragana: string,
+  partOfSpeech = ''
+): DeckCard {
   return {
     id,
     expression,
     exampleSentence: '',
     translation: '',
     readingHiragana,
-    partOfSpeech: '',
+    partOfSpeech,
     furiganaSentence: '',
     translatedSentence: '',
     hasKanji: true

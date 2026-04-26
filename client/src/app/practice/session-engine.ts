@@ -51,7 +51,7 @@ export function getCurrentPracticeCard(session: PracticeSessionState): DeckCard 
  */
 export function submitPracticeAnswer(
   session: PracticeSessionState,
-  submittedHiragana: string
+  submittedHiragana: string | readonly string[]
 ): PracticeSessionState {
   const currentCard = getCurrentPracticeCard(session);
   if (currentCard === null || session.lastResult !== null) {
@@ -80,12 +80,37 @@ export function advancePracticeSession(session: PracticeSessionState): PracticeS
   };
 }
 
-function createAnswerResult(card: DeckCard, submittedHiragana: string): AnswerResult {
+function createAnswerResult(
+  card: DeckCard,
+  submittedHiragana: string | readonly string[]
+): AnswerResult {
+  const submittedAnswers = toSubmittedAnswerList(submittedHiragana);
   return {
-    isCorrect: submittedHiragana === card.readingHiragana,
-    submittedHiragana,
+    isCorrect: submittedAnswers.some(answer => isAcceptedCardAnswer(card, answer)),
+    submittedHiragana: submittedAnswers[0] ?? '',
     expectedHiragana: card.readingHiragana
   };
+}
+
+function toSubmittedAnswerList(submittedHiragana: string | readonly string[]): readonly string[] {
+  if (typeof submittedHiragana === 'string') {
+    return [submittedHiragana];
+  }
+
+  return submittedHiragana;
+}
+
+function isAcceptedCardAnswer(card: DeckCard, submittedHiragana: string): boolean {
+  if (submittedHiragana === card.readingHiragana) {
+    return true;
+  }
+
+  return isAdjectiveStemAnswer(card, submittedHiragana);
+}
+
+function isAdjectiveStemAnswer(card: DeckCard, submittedHiragana: string): boolean {
+  return card.partOfSpeech === 'Adjective'
+    && `${submittedHiragana}い` === card.readingHiragana;
 }
 
 function applyAnswerResult(
