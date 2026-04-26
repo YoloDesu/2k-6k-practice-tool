@@ -135,7 +135,56 @@ h1 {
 
 .preview-button-row {
   justify-content: flex-end;
+  position: relative;
 }
+
+.options-menu {
+  position: relative;
+}
+
+.options-menu summary {
+  align-items: center;
+  background: #e7eeeb;
+  border-radius: 8px;
+  color: #1f2933;
+  cursor: pointer;
+  display: flex;
+  font-weight: 800;
+  min-height: 44px;
+  padding: 0 18px;
+}
+
+.options-menu[open] summary {
+  background: #d8e6e2;
+}
+
+.options-menu label {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #d9e1de;
+  display: flex;
+  gap: 10px;
+  min-width: 160px;
+  padding: 12px 14px;
+}
+
+.options-panel {
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.12);
+  position: absolute;
+  right: 0;
+  top: 52px;
+  z-index: 3;
+}
+
+.options-menu label:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+.options-menu label:last-of-type {
+  border-radius: 0 0 8px 8px;
+  border-top: 0;
+}
+
 
 .table-wrap {
   margin-top: 18px;

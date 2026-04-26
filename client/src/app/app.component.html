@@ -38,6 +38,19 @@
         </p>
       </div>
       <div class="preview-button-row">
+        <details class="options-menu">
+          <summary>Options</summary>
+          <div class="options-panel">
+            <label>
+              <input type="checkbox" [(ngModel)]="showTranslation">
+              Translation
+            </label>
+            <label>
+              <input type="checkbox" [(ngModel)]="showPhrases">
+              Phrases
+            </label>
+          </div>
+        </details>
         <button class="secondary-action" type="button" (click)="toggleAllCards()">
           {{ allCardsSelected ? 'Unselect all' : 'Select all' }}
         </button>
@@ -82,8 +95,8 @@
     <article class="prompt">
       <p class="part-of-speech">{{ currentCard.partOfSpeech }}</p>
       <h2>{{ currentCard.expression }}</h2>
-      <p>{{ currentCard.exampleSentence }}</p>
-      <p class="translation">{{ currentCard.translation }}</p>
+      <p *ngIf="showPhrases">{{ currentCard.exampleSentence }}</p>
+      <p class="translation" *ngIf="showTranslation">{{ currentCard.translation }}</p>
     </article>
 
     <form class="answer-form" (ngSubmit)="submitAnswer()">

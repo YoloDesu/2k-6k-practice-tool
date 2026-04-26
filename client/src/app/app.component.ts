@@ -48,6 +48,8 @@ export class AppComponent implements OnDestroy {
   protected preview: DeckPreview | null = null;
   protected selectedCardIds = new Set<number>();
   protected session = createPracticeSession([]);
+  protected showPhrases = true;
+  protected showTranslation = true;
 
   protected get currentCard(): DeckCard | null {
     return getCurrentPracticeCard(this.session);
@@ -179,6 +181,8 @@ export class AppComponent implements OnDestroy {
     this.preview = null;
     this.selectedCardIds = new Set<number>();
     this.session = createPracticeSession([]);
+    this.showPhrases = true;
+    this.showTranslation = true;
     this.phase = 'upload';
     this.clearFileInput();
     this.resetStopwatch();
