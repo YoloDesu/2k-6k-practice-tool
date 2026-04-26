@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { DeckCard } from './models/deck-card';
-import { createSelectedCardIds, filterSelectedCards } from './import-filter';
+import { createPracticeCards, createSelectedCardIds, filterSelectedCards } from './import-filter';
 
 describe('import filter', () => {
   it('selects all parsed cards by default', () => {
-    const cards = [card(1, '一'), card(2, 'これ')];
+    const cards = [card(1, 'one'), card(2, 'two')];
 
     const selectedIds = createSelectedCardIds(cards);
 
@@ -13,12 +13,41 @@ describe('import filter', () => {
   });
 
   it('returns only cards left checked by the user', () => {
-    const cards = [card(1, '一'), card(2, 'これ')];
+    const cards = [card(1, 'one'), card(2, 'two')];
     const selectedIds = new Set<number>([2]);
 
     const selectedCards = filterSelectedCards(cards, selectedIds);
 
-    expect(selectedCards.map(selectedCard => selectedCard.expression)).toEqual(['これ']);
+    expect(selectedCards.map(selectedCard => selectedCard.expression)).toEqual(['two']);
+  });
+
+  it('keeps selected cards ordered when randomization is off', () => {
+    const cards = [card(1, 'one'), card(2, 'two'), card(3, 'three')];
+
+    const practiceCards = createPracticeCards(cards, new Set<number>([1, 3]), false);
+
+    expect(practiceCards.map(practiceCard => practiceCard.expression)).toEqual(['one', 'three']);
+  });
+
+  it('randomizes selected cards with the provided random source', () => {
+    const cards = [card(1, 'one'), card(2, 'two'), card(3, 'three')];
+    const randomValues = [0, 0];
+
+    const practiceCards = createPracticeCards(
+      cards,
+      createSelectedCardIds(cards),
+      true,
+      () => randomValues.shift() ?? 0
+    );
+
+    expect(practiceCards.map(practiceCard => practiceCard.expression)).toEqual(['two', 'three', 'one']);
+  });
+
+  it('rejects invalid random values with the offending value', () => {
+    const cards = [card(1, 'one'), card(2, 'two')];
+
+    expect(() => createPracticeCards(cards, createSelectedCardIds(cards), true, () => 1))
+      .toThrow('randomValue was 1');
   });
 });
 

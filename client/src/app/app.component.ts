@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { DeckCard, DeckPreview } from './models/deck-card';
 import { DeckPreviewApiService } from './services/deck-preview-api.service';
 import { KanaNormalizerService } from './services/kana-normalizer.service';
-import { createSelectedCardIds, filterSelectedCards } from './import-filter';
+import { createPracticeCards, createSelectedCardIds } from './import-filter';
 import {
   PracticeSessionState,
   advancePracticeSession,
@@ -48,6 +48,7 @@ export class AppComponent implements OnDestroy {
   protected preview: DeckPreview | null = null;
   protected selectedCardIds = new Set<number>();
   protected session = createPracticeSession([]);
+  protected randomizeCards = false;
   protected showPhrases = true;
   protected showTranslation = true;
 
@@ -136,7 +137,7 @@ export class AppComponent implements OnDestroy {
   }
 
   protected startPractice(): void {
-    const cards = filterSelectedCards(this.preview?.cards ?? [], this.selectedCardIds);
+    const cards = createPracticeCards(this.preview?.cards ?? [], this.selectedCardIds, this.randomizeCards);
     this.session = createPracticeSession(cards);
     this.answerText = '';
     this.phase = this.session.isComplete ? 'complete' : 'practice';
@@ -169,7 +170,8 @@ export class AppComponent implements OnDestroy {
   }
 
   protected restartPractice(): void {
-    this.session = createPracticeSession(this.session.cards);
+    const cards = createPracticeCards(this.preview?.cards ?? this.session.cards, this.selectedCardIds, this.randomizeCards);
+    this.session = createPracticeSession(cards);
     this.answerText = '';
     this.phase = this.session.isComplete ? 'complete' : 'practice';
     this.startStopwatchIfNeeded();
@@ -181,6 +183,7 @@ export class AppComponent implements OnDestroy {
     this.preview = null;
     this.selectedCardIds = new Set<number>();
     this.session = createPracticeSession([]);
+    this.randomizeCards = false;
     this.showPhrases = true;
     this.showTranslation = true;
     this.phase = 'upload';
