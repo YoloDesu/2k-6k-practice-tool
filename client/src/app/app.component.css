@@ -303,6 +303,34 @@ th {
   font-size: 2.5rem;
 }
 
+.missed-list {
+  border-top: 1px solid #e0e7e4;
+  display: grid;
+  gap: 10px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.missed-list h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.missed-row {
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e0e7e4;
+  border-radius: 8px;
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
+
+.missed-row span:last-child {
+  color: #64707d;
+}
+
 @media (max-width: 680px) {
   .app-shell {
     padding: 16px;

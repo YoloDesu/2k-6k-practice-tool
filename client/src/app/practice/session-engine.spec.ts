@@ -9,21 +9,23 @@ import {
 
 describe('practice session engine', () => {
   it('accepts romaji converted to hiragana', () => {
-    let session = createPracticeSession([card(1, '今日', 'きょう')]);
+    let session = createPracticeSession([card(1, 'today', '\u304d\u3087\u3046')]);
 
     session = submitPracticeAnswer(session, normalizeRomajiAnswer('KYOU'));
 
     expect(session.correctCount).toBe(1);
+    expect(session.incorrectCards).toEqual([]);
     expect(session.lastResult?.isCorrect).toBe(true);
   });
 
-  it('reveals wrong answers and advances only after next', () => {
-    let session = createPracticeSession([card(1, '今日', 'きょう')]);
+  it('tracks wrong words and advances only after next', () => {
+    let session = createPracticeSession([card(1, 'today', '\u304d\u3087\u3046')]);
 
     session = submitPracticeAnswer(session, normalizeRomajiAnswer('ashita'));
 
     expect(session.correctCount).toBe(0);
-    expect(session.lastResult?.expectedHiragana).toBe('きょう');
+    expect(session.incorrectCards.map(missedCard => missedCard.expression)).toEqual(['today']);
+    expect(session.lastResult?.expectedHiragana).toBe('\u304d\u3087\u3046');
     expect(session.isComplete).toBe(false);
 
     session = advancePracticeSession(session);
@@ -31,13 +33,17 @@ describe('practice session engine', () => {
     expect(session.isComplete).toBe(true);
   });
 
-  it('keeps final score from submitted answers', () => {
-    let session = createPracticeSession([card(1, '一', 'いち'), card(2, '二', 'に')]);
+  it('keeps final score and wrong words from submitted answers', () => {
+    let session = createPracticeSession([
+      card(1, 'one', '\u3044\u3061'),
+      card(2, 'two', '\u306b')
+    ]);
 
-    session = advancePracticeSession(submitPracticeAnswer(session, 'いち'));
-    session = advancePracticeSession(submitPracticeAnswer(session, 'さん'));
+    session = advancePracticeSession(submitPracticeAnswer(session, '\u3044\u3061'));
+    session = advancePracticeSession(submitPracticeAnswer(session, '\u3055\u3093'));
 
     expect(session.correctCount).toBe(1);
+    expect(session.incorrectCards.map(missedCard => missedCard.expression)).toEqual(['two']);
     expect(session.submittedCount).toBe(2);
     expect(session.cards.length).toBe(2);
   });

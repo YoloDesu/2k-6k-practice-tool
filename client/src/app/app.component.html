@@ -138,6 +138,13 @@
         <strong>{{ finalElapsedTime }}</strong>
       </div>
     </div>
+    <div class="missed-list" *ngIf="session.incorrectCards.length > 0">
+      <h3>Wrong words</h3>
+      <div class="missed-row" *ngFor="let card of session.incorrectCards">
+        <span>{{ card.expression }}</span>
+        <span>{{ card.readingHiragana }}</span>
+      </div>
+    </div>
     <div class="button-row">
       <button class="primary-action" type="button" (click)="restartPractice()">Restart</button>
       <button class="secondary-action" type="button" (click)="resetImport()">Import again</button>

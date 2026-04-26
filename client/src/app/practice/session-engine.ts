@@ -10,6 +10,7 @@ export interface PracticeSessionState {
   readonly cards: readonly DeckCard[];
   readonly currentIndex: number;
   readonly correctCount: number;
+  readonly incorrectCards: readonly DeckCard[];
   readonly submittedCount: number;
   readonly lastResult: AnswerResult | null;
   readonly isComplete: boolean;
@@ -24,6 +25,7 @@ export function createPracticeSession(cards: readonly DeckCard[]): PracticeSessi
     cards,
     currentIndex: 0,
     correctCount: 0,
+    incorrectCards: [],
     submittedCount: 0,
     lastResult: null,
     isComplete: cards.length === 0
@@ -57,7 +59,7 @@ export function submitPracticeAnswer(
   }
 
   const result = createAnswerResult(currentCard, submittedHiragana);
-  return applyAnswerResult(session, result);
+  return applyAnswerResult(session, result, currentCard);
 }
 
 /**
@@ -88,11 +90,17 @@ function createAnswerResult(card: DeckCard, submittedHiragana: string): AnswerRe
 
 function applyAnswerResult(
   session: PracticeSessionState,
-  result: AnswerResult
+  result: AnswerResult,
+  currentCard: DeckCard
 ): PracticeSessionState {
+  const incorrectCards = result.isCorrect
+    ? session.incorrectCards
+    : [...session.incorrectCards, currentCard];
+
   return {
     ...session,
     correctCount: session.correctCount + (result.isCorrect ? 1 : 0),
+    incorrectCards,
     submittedCount: session.submittedCount + 1,
     lastResult: result
   };
