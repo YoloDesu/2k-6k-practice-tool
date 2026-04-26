@@ -11,17 +11,18 @@
 
   <section class="workspace" *ngIf="phase === 'upload'">
     <div class="upload-panel">
-      <label class="file-drop">
+      <div class="file-drop">
         <span>Choose Anki export</span>
+        <button class="secondary-action" type="button" (click)="openFilePicker()">Select .txt file</button>
         <input
           #deckFileInput
+          class="hidden-file-input"
           type="file"
           accept=".txt,text/plain"
-          (click)="resetFilePicker($event)"
           (change)="chooseFile($event)">
-      </label>
+      </div>
       <p class="file-name" *ngIf="importFile">{{ importFile.name }}</p>
-      <button class="primary-action" type="button" [disabled]="isImporting" (click)="importDeck()">
+      <button class="primary-action" type="button" [disabled]="!canImportDeck" (click)="importDeck()">
         {{ isImporting ? 'Importing...' : 'Import deck' }}
       </button>
       <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>

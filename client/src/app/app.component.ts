@@ -1,5 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, HostListener, OnDestroy, ViewChild, inject } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  HostListener,
+  OnDestroy,
+  ViewChild,
+  inject
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DeckCard, DeckPreview } from './models/deck-card';
 import { DeckPreviewApiService } from './services/deck-preview-api.service';
@@ -23,6 +31,7 @@ type PracticePhase = 'upload' | 'preview' | 'practice' | 'complete';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnDestroy {
+  private readonly changeDetector = inject(ChangeDetectorRef);
   private readonly deckPreviewApi = inject(DeckPreviewApiService);
   private readonly kanaNormalizer = inject(KanaNormalizerService);
   @ViewChild('answerInput') private answerInput?: ElementRef<HTMLInputElement>;
@@ -60,6 +69,10 @@ export class AppComponent implements OnDestroy {
     return this.preview !== null && this.selectedCount === this.preview.cards.length;
   }
 
+  protected get canImportDeck(): boolean {
+    return this.importFile !== null && !this.isImporting;
+  }
+
   @HostListener('document:keydown.enter', ['$event'])
   protected handleEnterKey(event: Event): void {
     if (this.phase !== 'practice') {
@@ -74,28 +87,31 @@ export class AppComponent implements OnDestroy {
     this.stopStopwatch();
   }
 
-  protected chooseFile(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    this.importFile = input.files?.[0] ?? null;
-    this.errorMessage = '';
-  }
-
-  protected resetFilePicker(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    input.value = '';
+  protected openFilePicker(): void {
+    this.clearFileInput();
     this.importFile = null;
     this.errorMessage = '';
+    this.deckFileInput?.nativeElement.click();
   }
 
-  protected importDeck(): void {
-    const file = this.importFile ?? this.deckFileInput?.nativeElement.files?.[0] ?? null;
+  protected chooseFile(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0] ?? null;
     if (file === null) {
-      this.errorMessage = 'Choose an Anki .txt export before importing.';
       return;
     }
 
     this.importFile = file;
-    this.readDeckPreview(file);
+    this.errorMessage = '';
+  }
+
+  protected importDeck(): void {
+    if (this.importFile === null) {
+      this.errorMessage = 'Choose an Anki .txt export before importing.';
+      return;
+    }
+
+    this.readDeckPreview(this.importFile);
   }
 
   protected isCardSelected(card: DeckCard): boolean {
@@ -184,11 +200,13 @@ export class AppComponent implements OnDestroy {
     this.selectedCardIds = createSelectedCardIds(preview.cards);
     this.isImporting = false;
     this.phase = 'preview';
+    this.changeDetector.detectChanges();
   }
 
   private rejectDeckPreview(): void {
     this.errorMessage = 'The deck could not be imported. Confirm the API is running and the file is UTF-8 text.';
     this.isImporting = false;
+    this.changeDetector.detectChanges();
   }
 
   private setCardSelected(cardId: number, isSelected: boolean): void {
