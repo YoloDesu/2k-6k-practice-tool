@@ -1,0 +1,128 @@
+<main class="app-shell">
+  <section class="top-bar">
+    <div>
+      <p class="eyebrow">Core 2k/6k</p>
+      <h1>Japanese Reading Practice</h1>
+    </div>
+    <div class="score" *ngIf="phase === 'practice' || phase === 'complete'">
+      {{ session.correctCount }}/{{ totalCount }}
+    </div>
+  </section>
+
+  <section class="workspace" *ngIf="phase === 'upload'">
+    <div class="upload-panel">
+      <label class="file-drop">
+        <span>Choose Anki export</span>
+        <input
+          #deckFileInput
+          type="file"
+          accept=".txt,text/plain"
+          (click)="resetFilePicker($event)"
+          (change)="chooseFile($event)">
+      </label>
+      <p class="file-name" *ngIf="importFile">{{ importFile.name }}</p>
+      <button class="primary-action" type="button" [disabled]="isImporting" (click)="importDeck()">
+        {{ isImporting ? 'Importing...' : 'Import deck' }}
+      </button>
+      <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+    </div>
+  </section>
+
+  <section class="workspace preview-layout" *ngIf="phase === 'preview' && preview">
+    <div class="preview-actions">
+      <div>
+        <h2>{{ selectedCount }}/{{ preview.cards.length }} cards selected</h2>
+        <p *ngIf="preview.rejectedRows.length > 0">
+          {{ preview.rejectedRows.length }} rows could not be parsed.
+        </p>
+      </div>
+      <div class="preview-button-row">
+        <button class="secondary-action" type="button" (click)="toggleAllCards()">
+          {{ allCardsSelected ? 'Unselect all' : 'Select all' }}
+        </button>
+        <button class="primary-action" type="button" [disabled]="selectedCount === 0" (click)="startPractice()">
+          Start practice
+        </button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Select</th>
+            <th>Word</th>
+            <th>Reading</th>
+            <th>Meaning</th>
+            <th>Kanji</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let card of preview.cards">
+            <td>
+              <input type="checkbox" [checked]="isCardSelected(card)" (change)="toggleCard(card, $event)">
+            </td>
+            <td>{{ card.expression }}</td>
+            <td>{{ card.readingHiragana }}</td>
+            <td>{{ card.translation }}</td>
+            <td>{{ card.hasKanji ? 'Yes' : 'No' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="workspace practice-layout" *ngIf="phase === 'practice' && currentCard">
+    <div class="practice-meta">
+      <button class="text-action" type="button" (click)="returnToSelection()">Back</button>
+      <span>Card {{ session.currentIndex + 1 }} of {{ totalCount }}</span>
+      <span>{{ session.correctCount }}/{{ totalCount }}</span>
+    </div>
+    <article class="prompt">
+      <p class="part-of-speech">{{ currentCard.partOfSpeech }}</p>
+      <h2>{{ currentCard.expression }}</h2>
+      <p>{{ currentCard.exampleSentence }}</p>
+      <p class="translation">{{ currentCard.translation }}</p>
+    </article>
+
+    <form class="answer-form" (ngSubmit)="submitAnswer()">
+      <label for="answer">Hiragana reading in romaji</label>
+      <input
+        #answerInput
+        id="answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        [(ngModel)]="answerText"
+        [disabled]="session.lastResult !== null"
+        autofocus>
+      <button class="primary-action" type="submit" [disabled]="answerText.trim().length === 0 || session.lastResult !== null">
+        Submit
+      </button>
+    </form>
+
+    <div class="feedback" *ngIf="session.lastResult as result" [class.correct]="result.isCorrect">
+      <strong>{{ result.isCorrect ? 'Correct' : 'Not quite' }}</strong>
+      <span>Expected {{ result.expectedHiragana }}</span>
+      <button class="secondary-action" type="button" (click)="nextCard()">Next</button>
+    </div>
+  </section>
+
+  <section class="workspace complete-layout" *ngIf="phase === 'complete'">
+    <h2>Session complete</h2>
+    <div class="summary-grid">
+      <div>
+        <span>Score</span>
+        <strong>{{ session.correctCount }}/{{ totalCount }}</strong>
+      </div>
+      <div>
+        <span>Time</span>
+        <strong>{{ finalElapsedTime }}</strong>
+      </div>
+    </div>
+    <div class="button-row">
+      <button class="primary-action" type="button" (click)="restartPractice()">Restart</button>
+      <button class="secondary-action" type="button" (click)="resetImport()">Import again</button>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,9 @@
+const backendUrl = process.env.API_BASE_URL ?? 'http://localhost:5000';
+
+module.exports = {
+  '/api': {
+    target: backendUrl,
+    secure: false,
+    changeOrigin: true
+  }
+};

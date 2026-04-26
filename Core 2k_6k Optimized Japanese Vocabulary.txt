@@ -1,0 +1,156 @@
+#separator:tab
+#html:false
+それ   それはとってもいい話だ。	that, that one   それ   Pronoun   それはとってもいい話はなしだ。   That's a really nice story.
+一つ   それを一つください。	one (thing)   ひとつ   Noun   それを一ひとつください。   Please give me one of those.
+一   一から始めましょう。	one   いち   Noun   一いちから始はじめましょう。   Let's start from the beginning.
+二   その人には二回会った。	two   に   Noun   その人ひとには二に回会かい あった。   I met that person twice.
+二つ   ソフトクリームを二つください。	two (things)   ふたつ   Noun   ソフトクリームを二ふたつください。   Please give me two ice cream cones.
+三   彼女は三人の子供の母親だ。	three   さん   Noun   彼女かのじょは三さん人にんの子供こどもの母親ははおやだ。   She's the mother of three children.
+三つ   コップを三つ買いました。	three (things)   みっつ   Noun   コップを三みっつ買かいました。   I bought three glasses.
+四つ   私は腕時計を四つ持っています。	four (things)   よっつ   Noun   私わたしは腕時計うでどけいを四よっつ持もっています。   I have four wristwatches.
+四   四月に大学に入学しました。	four   し   Noun   四し月がつに大学だいがくに入学にゅうがくしました。   I entered my university in April.
+これ   これをください。	this, this one   これ   Noun   これをください。   I'll have this please.
+四   ハワイは四回目です。	four   よん   Noun   ハワイは四よん回目かいめです。   This is my fourth trip to Hawaii.
+五つ   桃を五つください。	five (things)   いつつ   Noun   桃ももを五いつつください。   I'd like five peaches, please.
+五   五人で旅行に行きました。	five   ご   Noun   五ご人にんで旅行りょこうに行いきました。   Five of us went on a trip.
+六つ   息子は六つになりました。	six (things)   むっつ   Noun   息子むすこは六むっつになりました。   My son turned six.
+六   彼には子供が六人います。	six   ろく   Noun   彼かれには子供こどもが六ろく人にんいます。   He has six children.
+七   バナナが七本あります。	seven   なな   Noun   バナナが七なな本ほんあります。   There are seven bananas.
+七つ   この子は今年七つになります。	seven (things)   ななつ   Noun   この子こは今年ことし七ななつになります。   Our kid's turning seven this year.
+八   りんごを八個ください。	eight   はち   Noun   りんごを八はち個こください。   Please give me eight apples.
+八つ   あの家には時計が八つあります。	eight (things)   やっつ   Noun   あの家いえには時計とけいが八やっつあります。   There are eight clocks in that house.
+なる   彼は医者になりました。	become   なる   Verb   彼かれは医者いしゃになりました。   He became a doctor.
+九   野球は九人で1チームです。	nine   きゅう   Noun   野球やきゅうは九きゅう人にんで1ひとチームです。   In baseball there are nine people on one team.
+九つ   娘は明日九つになります。	nine (things)   ここのつ   Noun   娘むすめは明日あす九ここのつになります。   My daughter's turning nine tomorrow.
+十   その子は指で十数えました。	ten   じゅう   Noun   その子こは指ゆびで十じゅう数かぞえました。   The child counted to ten on her fingers.
+百   私の祖母は百才です。	hundred   ひゃく   Noun   私わたしの祖母そぼは百ひゃく才さいです。   My grandmother is 100 years old.
+千   千円貸してください。	thousand   せん   Noun   千せん円貸えん かしてください。   Please lend me 1000 yen.
+万   この靴は1万円です。	ten thousand   まん   Noun   この靴くつは1いち万まん円えんです。   These shoes are ten thousand yen.
+円   そこに大きな円を描いて。	circle   えん   Noun   そこに大おおきな円えんを描かいて。   Draw a big circle there.
+円   カレーライスは700円です。	yen   えん   Noun   カレーライスは700ななひゃく円えんです。   The curry and rice is 700 yen.
+時   時の経つのは早い。	time   とき   Noun   時ときの経たつのは早はやい。   Time passes by quickly.
+する   友達と一緒に宿題をした。	do, make   する   Verb   友達ともだちと一緒いっしょに宿題しゅくだいをした。   I did my homework with a friend.
+時々   彼は時々遅刻します。	sometimes   ときどき   Adverb   彼かれは時々ときどき遅刻ちこくします。   He's sometimes late.
+日   私たちは先月11日に結婚しました。	day   にち   Noun   私わたしたちは先月11せんげつ じゅういち日にちに結婚けっこんしました。   We got married last month on the 11th.
+六日   六日前に日本に帰ってきました。	six days, 6th of the month   むいか   Noun   六日むいか前まえに日本にほんに帰かえってきました。   I came back to Japan six days ago.
+三日   手紙が届くのに三日かかりました。	three days, 3rd of the month   みっか   Noun   手紙てがみが届とどくのに三日みっかかかりました。   It took three days for the letter to arrive.
+五日   五月五日は祝日です	five days, 5th of the month   いつか   Noun   五月ごがつ五日いつかは祝日しゅくじつです   May 5th is a holiday.
+八日   八日からイギリスに行きます。	eight days, 8th of the month   ようか   Noun   八日ようかからイギリスに行いきます。   I go to England on the eighth.
+二十日   来月の二十日は弟の誕生日です。	20 days, 20th of the month   はつか   Noun   来月らいげつの二十日はつかは弟おとうとの誕生日たんじょうびです。   The 20th of next month is my little brother's birthday.
+二日   私は二日待った。	two days, 2nd of the month   ふつか   Noun   私わたしは二日ふつか待まった。   I waited two days.
+九日   九日に荷物が届きます。	nine days, 9th of the month   ここのか   Noun   九日ここのかに荷物にもつが届とどきます。   The package will arrive on the ninth.
+ところ   私は友達のところに泊まった。	place   ところ   Noun   私わたしは友達ともだちのところに泊とまった。   I stayed at my friend's place for the night.
+一日   来月の一日は空いていますか。	1st of the month   ついたち   Noun   来月らいげつの一日ついたちは空あいていますか。   Are you free on the 1st of next month?
+十日   十日後に帰ります。	ten days, 10th of the month   とおか   Noun   十日とおか後ごに帰かえります。   I'll come home in ten days.
+七日   先月の七日に孫が生まれました。	seven days, 7th of the month   なのか   Noun   先月せんげつの七日なのかに孫まごが生うまれました。   My grandchild was born on the seventh of last month.
+四日   新学期は来月の四日からです。	four days, 4th of the month   よっか   Noun   新学期しんがっきは来月らいげつの四日よっかからです。   The new school term starts on the fourth of next month.
+月   今夜は月がとてもきれいです。	moon   つき   Noun   今夜こんやは月つきがとてもきれいです。   The moon looks so beautiful tonight.
+水   水を一杯ください。	water   みず   Noun   水みずを一杯いっぱいください。   Please give me a glass of water.
+金   これはかなり金がかかった。	money   かね   Noun   これはかなり金かねがかかった。   This cost quite a bit of money.
+日曜日   日曜日は海に行きました。	Sunday   にちようび   Noun   日曜日にちようびは海うみに行いきました。   We went to the seaside on Sunday.
+土曜日   土曜日の夜はクラブに行きます。	Saturday   どようび   Noun   土曜日どようびの夜よるはクラブに行いきます。   I'm going to a club Saturday night.
+やる   一緒に宿題をやろう。	do   やる   Verb   一緒いっしょに宿題しゅくだいをやろう。   Let's do our homework together.
+金曜日   金曜日の夜は友達と出かけます。	Friday   きんようび   Noun   金曜日きんようびの夜よるは友達ともだちと出でかけます。   I go out with my friends on Friday nights.
+月曜日   月曜日に会いましょう。	Monday   げつようび   Noun   月曜日げつようびに会あいましょう。   Let's meet on Monday.
+木曜日   木曜日は仕事が休みです。	Thursday   もくようび   Noun   木曜日もくようびは仕事しごとが休やすみです。   Thursday is my day off work.
+曜日   曜日を間違えました。	day of the week   ようび   Noun   曜日ようびを間違まちがえました。   I got the day of the week wrong.
+火曜日   火曜日に会議があります。	Tuesday   かようび   Noun   火曜日かようびに会議かいぎがあります。   There's a meeting on Tuesday.
+水曜日   水曜日はバイトがあります。	Wednesday   すいようび   Noun   水曜日すいようびはバイトがあります。   I have a part-time job on Wednesdays.
+週   その次の週は空いてますか。	week   しゅう   Noun   その次つぎの週しゅうは空あいてますか。   Are you free the following week?
+年   新しい年が始まりました。	year, age   とし   Noun   新あたらしい年としが始はじまりました。   A new year has started.
+分かる   質問の意味は分かりましたか。	understand   わかる   Verb   質問しつもんの意味いみは分わかりましたか。   Did you understand the meaning of the question?
+そう   私もそう思います。	in such manner, that way   そう   Adverb   私わたしもそう思おもいます。   That's what I think too.
+何   夕食には何を食べたいですか。	what, which   なに   Noun   夕食ゆうしょくには何なにを食たべたいですか。   What would you like for supper?
+先   お先にどうぞ。	ahead, first   さき   Noun   お先さきにどうぞ。   Please go ahead.
+今年   今年はイタリアに旅行したい。	this year   ことし   Noun   今年ことしはイタリアに旅行りょこうしたい。   I want to travel to Italy this year.
+今   彼は今、勉強しています。	now   いま   Adverb   彼かれは今いま、勉強べんきょうしています。   He's studying now.
+今日   今日は仕事がありません。	today   きょう   Noun   今日きょうは仕事しごとがありません。   I have no work today.
+今月   今月はとても忙しい。	this month   こんげつ   Noun   今月こんげつはとても忙いそがしい。   I'm very busy this month.
+今週   今週は日本語のテストがあります。	this week   こんしゅう   Noun   今週こんしゅうは日本語にほんごのテストがあります。   There's a Japanese test this week.
+来る   彼は昼過ぎに来ます。	come   くる   Verb   彼かれは昼過ひるすぎに来きます。   He'll come after lunch.
+来年   来年一緒に旅行しましょう。	next year   らいねん   Noun   来年らいねん一緒いっしょに旅行りょこうしましょう。   Let's travel together next year.
+もう   彼はもう帰りました。	already, yet   もう   Adverb   彼かれはもう帰かえりました。   He's already gone home.
+行く   日曜日は図書館に行きます。	go   いく   Verb   日曜日にちようびは図書館としょかんに行いきます。   I go to the library on Sundays.
+帰る   家に帰ろう。	return, go back   かえる   Verb   家うちに帰かえろう。   Let's go home.
+大きい   あの大きい建物は何ですか。	big   おおきい   Adjective   あの大おおきい建物たてものは何なんですか。   What's that big building?
+小さい   小さい花が咲いています。	small   ちいさい   Adjective   小ちいさい花はなが咲さいています。   Small flowers are blooming.
+少ない   今年は雨が少ないです。	few, little   すくない   Adjective   今年ことしは雨あめが少すくないです。   There's not much rain this year.
+少し   少し疲れました。	a bit, a little while   すこし   Adverb   少すこし疲つかれました。   I'm a little tired.
+多い   京都にはお寺が多い。	lots of   おおい   Adjective   京都きょうとにはお寺てらが多おおい。   There are a lot of temples in Kyoto.
+多分   彼女は多分家で寝ています。	probably, perhaps   たぶん   Adverb   彼女かのじょは多分たぶん家いえで寝ねています。   She's probably sleeping at home.
+上げる   彼は荷物をあみだなに上げた。	raise, improve   あげる   Verb   彼かれは荷物にもつをあみだなに上あげた。   He put the luggage on the luggage rack.
+よく   彼女はよく旅行に行きます。	often   よく   Adverb   彼女かのじょはよく旅行りょこうに行いきます。   She often goes on holiday.
+上る   猫が屋根に上っている。	go up   のぼる   Verb   猫ねこが屋根やねに上のぼっている。   The cat's up on the roof.
+上   上を向いて。	up, above   うえ   Noun   上うえを向むいて。   Look up.
+下   財布は机の下にあった。	under, below   した   Noun   財布さいふは机つくえの下したにあった。   My purse was under the desk.
+右   右のポケットにハンカチが入っています。	right   みぎ   Noun   右みぎのポケットにハンカチが入はいっています。   There's a handkerchief in my right pocket.
+左   そこを左に曲がってください。	left   ひだり   Noun   そこを左ひだりに曲まがってください。   Please turn left there.
+方   彼は私の方を見ました。	direction, side   ほう   Noun   彼かれは私わたしの方ほうを見みました。   He looked at me.
+大人   お酒は大人になってから。	adult   おとな   Noun   お酒さけは大人おとなになってから。   You can drink alcohol when you're an adult.
+人   彼は優しい人です。	person   ひと   Noun   彼かれは優やさしい人ひとです。   He's a nice guy.
+一人   そこには私一人しかいなかった。	one, one person   ひとり   Noun   そこには私わたし一人ひとりしかいなかった。   I was the only one there.
+どう   あなたはどう思いますか。	how, what   どう   Adverb   あなたはどう思おもいますか。   What do you think?
+入れる   彼はかばんに手帳を入れた。	put in   いれる   Verb   彼かれはかばんに手帳てちょうを入いれた。   He put the appointment book in his bag.
+入る   寒いので中に入ってください。	enter   はいる   Verb   寒さむいので中なかに入はいってください。   It's cold so please come inside.
+出る   今朝は早く家を出ました。	go out, leave   でる   Verb   今朝けさは早はやく家いえを出でました。   I left the house early this morning.
+出来る   彼女はイタリア語が出来ます。	can do, be good at   できる   Verb   彼女かのじょはイタリア語ごが出来できます。   She knows Italian.
+出す   彼はかばんから教科書を出した。	take out   だす   Verb   彼かれはかばんから教科書きょうかしょを出だした。   He took the textbook out of his bag.
+本   本を１冊買いました。	book, volume   ほん   Noun   本ほんを１冊買いっさつ かいました。   I bought one book.
+休む   明日、会社を休みます。	take a day off, take a break   やすむ   Verb   明日あした、会社かいしゃを休やすみます。   I'm off work tomorrow.
+体   私は体が丈夫だ。	body, health   からだ   Noun   私わたしは体からだが丈夫じょうぶだ。   I'm physically strong.
+目   彼女は青い目をしています。	eye   め   Noun   彼女かのじょは青あおい目めをしています。   She has blue eyes.
+どこ   あの本をどこに置きましたか。	where   どこ   Noun   あの本ほんをどこに置おきましたか。   Where did you put that book?
+口   口を大きく開けてください。	mouth   くち   Noun   口くちを大おおきく開あけてください。   Open wide, please.
+耳   彼女は耳がよく聞こえません。	ear, hearing   みみ   Noun   彼女かのじょは耳みみがよく聞きこえません。   Her hearing isn't very good.
+上手   妹は歌が上手です。	good, skilled   じょうず   Adjectival Noun   妹いもうとは歌うたが上手じょうずです。   My little sister can sing.
+手   分かった人は手を上げてください。	hand   て   Noun   分わかった人ひとは手てを上あげてください。   Please raise your hand if you understand.
+足   彼は足が長い。	leg, foot   あし   Noun   彼かれは足あしが長ながい。   He has long legs.
+空く (1)   レストランは空いていました。	be empty   すく   Verb   レストランは空すいていました。   The restaurant was empty.
+男   男の人が私たちに話しかけた。	man, male   おとこ   Noun   男おとこの人ひとが私わたしたちに話はなしかけた。   This guy began talking to us.
+女   店員は若い女の人でした。	woman, girl   おんな   Noun   店員てんいんは若わかい女おんなの人ひとでした。   The salesclerk was a young woman.
+子供   電車で子供が騒いでいた。	child, kid   こども   Noun   電車でんしゃで子供こどもが騒さわいでいた。   Kids were making a racket in the train.
+あげる   この本、あなたにあげます。	give   あげる   Verb   この本ほん、あなたにあげます。   I'll give you this book.
+好き   私はワインが好きです。	favorite, liked   すき   Adjectival Noun   私わたしはワインが好すきです。   I like wine.
+大好き   私は犬が大好きだ。	love   だいすき   Adjective   私わたしは犬いぬが大好だいすきだ。   I love dogs.
+私   私が行きましょう。	I   わたし   Noun   私わたしが行いきましょう。   Why don't I go.
+友達   私には友達がたくさんいます。	friend, companion   ともだち   Noun   私わたしには友達ともだちがたくさんいます。   I have a lot of friends.
+家   家に遊びに来てください。	house, home   うち   Noun   家うちに遊あそびに来きてください。   Please come over to my house.
+気   彼は意外に気が小さい。	spirit, temperament   き   Noun   彼かれは意外いがいに気きが小ちいさい。   He's unexpectedly timid.
+元気   おかげさまで元気です。	healthy, energetic   げんき   Adjective   おかげさまで元気げんきです。   I'm fine, thank you.
+天気   今日はいい天気ですね。	weather   てんき   Noun   今日きょうはいい天気てんきですね。   It's nice out today.
+晴れる   明日は晴れるといいですね。	be sunny, clear up   はれる   Verb   明日あしたは晴はれるといいですね。   I hope it'll be sunny tomorrow.
+こう   こう小さい字は読めない。	like this, this kind of   こう   Adverb   こう小ちいさい字じは読よめない。   I can't read such small letters.
+昨日   昨日、友達に会った。	yesterday   きのう   Noun   昨日きのう、友達ともだちに会あった。   I met a friend yesterday.
+開ける   窓を開けてください。	open, unlock   あける   Verb   窓まどを開あけてください。   Please open the window.
+開く   32ページを開いてください。	open   ひらく   Verb   32さんじゅうにページを開ひらいてください。   Please open to page 32.
+閉じる   教科書を閉じてください。	close   とじる   Verb   教科書きょうかしょを閉とじてください。   Please close your textbooks.
+閉める   ちゃんとドアを閉めてよ。	shut, close   しめる   Verb   ちゃんとドアを閉しめてよ。   Close the door properly.
+閉まる   お店はもう閉まっていました。	be shut, be closed   しまる   Verb   お店みせはもう閉しまっていました。   The shop had already closed.
+聞く   彼女はラジオを聞いています。	hear, ask   きく   Verb   彼女かのじょはラジオを聞きいています。   She's listening to the radio.
+時間   今は時間がありません。	time, hour   じかん   Noun   今いまは時間じかんがありません。   I don't have time now.
+高い   これがこの町で一番高いビルです。	high, tall   たかい   Adjective   これがこの町まちで一番いちばん高たかいビルです。   This is the tallest building in town.
+くれる   友達が誕生日プレゼントをくれた。	be given   くれる   Verb   友達ともだちが誕生日たんじょうびプレゼントをくれた。   My friend gave me a birthday present.
+安い   この服はとても安かった。	inexpensive, cheap   やすい   Adjective   この服ふくはとても安やすかった。   These clothes were very cheap.
+低い   彼は背が低い。	low, short   ひくい   Adjective   彼かれは背せが低ひくい。   He's short.
+前   その店の前で会いましょう。	front, before   まえ   Noun   その店みせの前まえで会あいましょう。   Let's meet in front of the shop.
+後   仕事の後、映画を見た。	after   あと   Adverb   仕事しごとの後あと、映画えいがを見みた。   I saw a movie after work.
+後ろ   後ろを向いて。	back, behind   うしろ   Noun   後うしろを向むいて。   Turn around.
+午後   明日の午後、お客様が来る。	afternoon, p.m.   ごご   Noun   明日あすの午後ごご、お客様きゃくさまが来くる。   A guest is coming to visit tomorrow afternoon.
+午前   午前9時のニュースです。	morning, a.m.   ごぜん   Noun   午前ごぜん9時くじのニュースです。   And now for the 9.00 a.m. news.
+朝   気持ちのいい朝です。	morning   あさ   Noun   気持きもちのいい朝あさです。   It's a pleasant morning.
+昼   私は昼のドラマを毎日見ます。	daytime, midday   ひる   Noun   私わたしは昼ひるのドラマを毎日見まいにち みます。   I watch daytime dramas every day.
+かなり   彼はかなり英語が上手です。	fairly, rather   かなり   Adverb   彼かれはかなり英語えいごが上手じょうずです。   He's pretty good at English.
+晩   晩ご飯は食べましたか。	evening (usually from sunset to bedtime)   ばん   Noun   晩ばんご飯はんは食たべましたか。   Have you had dinner?
+今晩   今晩のパーティーは何時からですか。	this evening, tonight   こんばん   Noun   今晩こんばんのパーティーは何時なんじからですか。   From what time is the party tonight?
+夜   きのうの夜は家にいました。	night (from sunset to sunrise)   よる   Noun   きのうの夜よるは家いえにいました。   I was at home last night.
+食べる   昨日タイカレーを食べました。	eat   たべる   Verb   昨日きのうタイカレーを食たべました。   I had Thai curry yesterday.
+飲む   友達とお酒を飲んでいます。	drink   のむ   Verb   友達ともだちとお酒さけを飲のんでいます。   I'm drinking sake with a friend.
+ご飯   私はパンよりご飯が好きだ。	cooked rice, meal   ごはん   Noun   私わたしはパンよりご飯はんが好すきだ。   I prefer rice to bread.
+買う   郵便局で切手を買いました。	buy   かう   Verb   郵便局ゆうびんきょくで切手きってを買かいました。   I bought a stamp at the post office.
+見る   私は絵を見るのが好きです。	see, look at   みる   Verb   私わたしは絵えを見みるのが好すきです。   I like looking at pictures.
+見せる   その写真を見せてください。	show   みせる   Verb   その写真しゃしんを見みせてください。   Please show me those pictures.
+もっと   もっと近くに来てください。	more   もっと   Adverb   もっと近ちかくに来きてください。   Please come closer.
+見つける   新しい仕事を見つけました。	find   みつける   Verb   新あたらしい仕事しごとを見みつけました。   I found a new job.
+見える   ここから富士山がよく見えます。	be visible   みえる   Verb   ここから富士山ふじさんがよく見みえます。   You can see Mount Fuji well from here.
+見つかる   メガネが見つかりません。	be found, be caught   みつかる   Verb   メガネが見みつかりません。   I can't find my glasses.
+言う   上司が「一杯、飲もう。」と言った。	"say, tell   いう   Verb   上司じょうしが「一杯いっぱい、飲のもう。」と言いった。   My boss said: ""Let's have a drink."""
